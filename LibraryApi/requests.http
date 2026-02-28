@@ -1,0 +1,82 @@
+### Szerzők
+
+# Összes szerző lekérése
+GET http://localhost:5000/api/authors
+
+###
+
+# Szerző lekérése ID alapján
+GET http://localhost:5000/api/authors/AUTHOR_ID_IDE
+
+###
+
+# Szerző létrehozása
+POST http://localhost:5000/api/authors
+Content-Type: application/json
+
+{
+  "name": "J.K. Rowling",
+  "nationality": "British",
+  "birthYear": 1965
+}
+
+###
+
+# Szerző módosítása
+PUT http://localhost:5000/api/authors/AUTHOR_ID_IDE
+Content-Type: application/json
+
+{
+  "name": "J.K. Rowling",
+  "nationality": "British",
+  "birthYear": 1965
+}
+
+###
+
+# Szerző törlése
+DELETE http://localhost:5000/api/authors/AUTHOR_ID_IDE
+
+###
+### Könyvek
+
+# Összes könyv lekérése
+GET http://localhost:5000/api/books
+
+###
+
+# Könyv lekérése ID alapján
+GET http://localhost:5000/api/books/BOOK_ID_IDE
+
+###
+
+# Könyv létrehozása
+POST http://localhost:5000/api/books
+Content-Type: application/json
+
+{
+  "title": "Harry Potter és a bölcsek köve",
+  "authorId": "AUTHOR_ID_IDE",
+  "year": 1997,
+  "genre": "Fantasy",
+  "description": "Egy fiatal varázsló kalandjai Roxfortban."
+}
+
+###
+
+# Könyv módosítása
+PUT http://localhost:5000/api/books/BOOK_ID_IDE
+Content-Type: application/json
+
+{
+  "title": "Harry Potter és a bölcsek köve",
+  "authorId": "AUTHOR_ID_IDE",
+  "year": 1997,
+  "genre": "Fantasy",
+  "description": "Frissített leírás."
+}
+
+###
+
+# Könyv törlése
+DELETE http://localhost:5000/api/books/BOOK_ID_IDE
