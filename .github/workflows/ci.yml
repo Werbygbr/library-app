@@ -29,7 +29,7 @@ jobs:
         with:
           context: ./LibraryApi
           push: true
-          tags: ghcr.io/${{ github.repository }}/backend:latest
+          tags: ghcr.io/werbygbr/library-app/backend:latest
 
   build-and-push-frontend:
     runs-on: ubuntu-latest
@@ -53,4 +53,4 @@ jobs:
         with:
           context: ./library-frontend
           push: true
-          tags: ghcr.io/${{ github.repository }}/frontend:latest
+          tags: ghcr.io/werbygbr/library-app/frontend:latest
